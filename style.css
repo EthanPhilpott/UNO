@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    --UNO-Red: #ED1C24; 
+    --UNO-White: #FFF;
+    --UNO-Black: #000;
+    --UNO-Yellow: #F8DA27;
+}
+
+#split {
+    display: flex;
+    width: auto;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: var(--UNO-Red);
+    border-bottom: .5vw solid black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--UNO-Yellow);
+    -webkit-text-stroke: .1vw var(--UNO-White);
+    display: flex;
+    text-shadow: -.35vw .35vw .1vw var(--UNO-Black) ;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw 0;
+    font-size: 2.5vw;
+}
+
+header img {
+    width: 5vw;
+}
+
+#currentCardSticky {
+    position: sticky;
+    top: 0;
+}
+
+#currentCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#currentCard img {
+    width: 25vw;
+}
+
+p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 1vw 0;
+}
+
+#cardBankContainer {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+#cardBank {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    background-color: var(--UNO-Red);
+    border-left: .5vw solid var(--UNO-Black);
+    overflow: auto;
+    height: 100vh;
+    flex: auto;
+}
+
+#cardBank img {
+    padding: .5vw;
+    width: 7.2vw;
+    
+}
+
+button {
+    background-color: var(--UNO-Red);
+    border: none;
+}

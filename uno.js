@@ -39,16 +39,38 @@ let cards = [
     ['WildDraw4'],['WildDraw4']
 ]
 
+function TempFunction () {
+    console.log(this.value)
+}
+
 function CreateCard (cardName) {
     card = '';
-    console.log(cardName)
     let img = document.createElement('img')
     for (let i = 0; i < cardName.length; i++) {
-        card += cardName[i]
+        card += cardName[i];
     }
-    console.log(card)
-    img.src = "Cards/" + card + ".png"
+
+    img.value = cardName
+    img.src = "Images/Cards/" + card + ".png";
     return img
 }
 
-document.getElementById("cardHand").appendChild(CreateCard(cards[Math.floor(Math.random() * 103)]))
+function CreateCardButton (img) {
+    button = document.createElement("button")
+    button.onclick = TempFunction
+    button.value = img.value;
+    button.appendChild(img)
+
+    return button;
+}
+
+
+document.getElementById("currentCard").appendChild(CreateCard(cards[Math.floor(Math.random() * 103)]))
+
+document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
+document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
+document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
+document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
+document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
+
+
