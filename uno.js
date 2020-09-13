@@ -35,17 +35,16 @@ let cards = [
     ['Yellow', 'Skip'], ['Yellow', 'Skip'],
     ['Yellow', 'Reverse'], ['Yellow', 'Reverse'],
 
-    ['Wild'],['Wild'],
-    ['WildDraw4'],['WildDraw4']
+    ['zWild'],['zWild'],
+    ['zWildDraw4'],['zWildDraw4']
 ]
 
 function CanPlace () {
     card = this.value.split(',');
     sumCard = this.value.replace(',', '')
 
-    if (card[0] != "Wild" && card[0] != "WildDraw4") {
+    if (card[0] != "zWild" && card[0] != "zWildDraw4") {
         if (card[0] == currCard[0] || card[1] == currCard[1]) {
-            console.log(currCard.id)
             document.getElementById('C').remove();
             document.getElementById(sumCard).remove();
             currCard = card;
@@ -54,6 +53,14 @@ function CanPlace () {
             cardCurr.id = 'C';
             document.getElementById("currentCard").appendChild(cardCurr);
         }
+    } else {
+        document.getElementById('C').remove();
+        document.getElementById(sumCard).remove();
+        currCard = card;
+    
+        let cardCurr = CreateCard(currCard);
+        cardCurr.id = 'C';
+        document.getElementById("currentCard").appendChild(cardCurr);
     }
 }
 
@@ -63,13 +70,15 @@ function CreateCard (cardName) {
     for (let i = 0; i < cardName.length; i++) {
         card += cardName[i];
     }
-    img.id = card
+    
+    img.id = card;
     img.value = cardName;
     img.src = "Images/Cards/" + card + ".png";
     return img;
 }
 
 function CreateCardButton (img) {
+    img.className = "card";
     button = document.createElement("button")
     button.onclick = CanPlace;
     button.value = img.value;
@@ -78,36 +87,39 @@ function CreateCardButton (img) {
     return button;
 }
 
+function SortCards () {
+    let q = document.querySelectorAll(".card");
+    let idList = []; 
+    let valueList = []
+    for (let i = 0; i < q.length; i++) {
+        idList.push(q[i].id);
+        valueList.push(q[i].value)
+    }
+    idList.sort()
+    valueList.sort()
+    for (let i = 0; i < idList.length; i++){
+        document.querySelector("#" + idList[i]).remove()
+    }
+    for (let i = 0; i < valueList.length; i++) {
+        document.getElementById("hand").appendChild(CreateCardButton(CreateCard(valueList[i])))
+    }
+}
+
+
+function AddCard () {
+    document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
+    SortCards()
+}
+
 let currCard = cards[Math.floor(Math.random() * 103)];
 
 let cardCurr = CreateCard(currCard);
 cardCurr.id = 'C';
 document.getElementById("currentCard").appendChild(cardCurr);
 
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
-document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
+
+
+
+
 
 

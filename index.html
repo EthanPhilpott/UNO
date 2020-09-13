@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unoffical Online Uno</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="split">
         <div>
-            <header>Unoffical<img src="Images/UNO_Logo.png" alt="Uno Logo">Online</header>
+            <header>Unoffical Online<img src="Images/UNO_Logo.png" alt="Uno Logo"></header>
             
-            <div>
+            <div id="sticky">
                 <div id="currentCard"></div>
-                <p>Current Card</p>
-            </div>
-            
-            
+                <button id="draw" onclick=AddCard()>Draw Card</button>
+            </div>  
         </div>
         
         <div id="cardBankContainer">

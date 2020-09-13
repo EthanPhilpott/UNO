@@ -33,14 +33,11 @@ header img {
     width: 5vw;
 }
 
-#currentCardSticky {
+#sticky {
     position: sticky;
     top: 0;
-}
-
-#currentCard {
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -49,20 +46,20 @@ header img {
     width: 25vw;
 }
 
-p {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#sticky button {
+    width: 75%;
     font-size: 2.5vw;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    margin: 1vw 0;
 }
 
 #cardBankContainer {
     display: flex;
     flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #cardBank {
@@ -78,11 +75,12 @@ p {
 
 #cardBank img {
     padding: .5vw;
-    width: 7.2vw;
-    
+    width: 7vw;
+    -webkit-user-drag: none; 
+    user-select: none;
 }
 
-button {
+#cardBankContainer button {
     background-color: var(--UNO-Red);
     border: none;
 }
