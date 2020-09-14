@@ -14,18 +14,19 @@
 
 header {
     width: 100%;
+    height: 2.5vw;
     text-align: center;
     background-color: var(--UNO-Red);
     border-bottom: .5vw solid black;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    color: var(--UNO-Yellow);
-    -webkit-text-stroke: .1vw var(--UNO-White);
     display: flex;
-    text-shadow: -.35vw .35vw .1vw var(--UNO-Black) ;
     justify-content: center;
     align-items: center;
     padding: 1vw 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--UNO-Yellow);
+    -webkit-text-stroke: .05vw var(--UNO-White);
+    text-shadow: -.3vw .3vw .1vw var(--UNO-Black);
     font-size: 2.5vw;
 }
 
@@ -53,24 +54,11 @@ header img {
     font-weight: bold;
 }
 
-#cardBankContainer {
-    display: flex;
-    flex: 1 1 auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #cardBank {
-    display: flex;
-    justify-content: center;
-    width: auto;
     background-color: var(--UNO-Red);
+    display: flex;
+    flex-grow: 1;
     border-left: .5vw solid var(--UNO-Black);
-    overflow: auto;
-    height: 100vh;
-    flex: auto;
 }
 
 #cardBank img {
@@ -80,7 +68,8 @@ header img {
     user-select: none;
 }
 
-#cardBankContainer button {
+#cardBank button {
     background-color: var(--UNO-Red);
     border: none;
 }
+

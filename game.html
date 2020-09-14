@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unoffical Online Uno</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><header>Unoffical Online<img src="Images/UNO_Logo.png" alt="Uno Logo"></header></li>
+        </ul>
+    </nav>
+    <div id="split">
+        <div>
+            <div id="sticky">
+                <div id="currentCard"></div>
+                <button id="draw" onclick=AddCard()>Draw Card</button>
+            </div>  
+        </div>
+        
+        <div id="cardBank">
+            <div id="hand"></div>
+        </div>
+    </div>
+    
+
+    <script src="js/uno.js"></script>
+</body>
+</html>

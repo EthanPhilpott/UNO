@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    --UNO-Red: #ED1C24; 
+    --UNO-White: #FFF;
+    --UNO-Black: #000;
+    --UNO-Yellow: #F8DA27;
+}
+
+nav header {
+    width: 100%;
+    height: 2.5vw;
+    text-align: center;
+    background-color: var(--UNO-Red);
+    border-bottom: .5vw solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--UNO-Yellow);
+    -webkit-text-stroke: .05vw var(--UNO-White);
+    text-shadow: -.3vw .3vw .1vw var(--UNO-Black);
+    font-size: 2.5vw;
+}
+
+header img {
+    width: 5vw;
+}

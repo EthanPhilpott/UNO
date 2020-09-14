@@ -73,7 +73,7 @@ function CreateCard (cardName) {
     
     img.id = card;
     img.value = cardName;
-    img.src = "Images/Cards/" + card + ".png";
+    img.src = "images/cards/" + card + ".png";
     return img;
 }
 
@@ -116,7 +116,6 @@ let currCard = cards[Math.floor(Math.random() * 103)];
 let cardCurr = CreateCard(currCard);
 cardCurr.id = 'C';
 document.getElementById("currentCard").appendChild(cardCurr);
-
 
 
 
