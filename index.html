@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <nav>
-        <header>Unoffical Online<img src="Images/UNO_Logo.png" alt="Uno Logo"></header>
-    </nav>
-    <a href="game.html">Click me for Game</a>
-    <script src=""></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unoffical UNO Online</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>Unoffical<img src="Images/UNO_Logo.png" alt="Uno Logo">Online</header>
+        <div id="split">
+            <div id="joinBox">
+                <h5>Join Game</h5>
+                <div id="gamesContainer">
+                    <div id="games"></div>
+                </div>
+            </div>
+
+            <div id="createBox">
+                <h5>Create Game</h5>
+                <form action="">
+                    <label for="name">Name of Game: </label><br>
+                    <input type="text" name="name" id="name" required><br>
+                    <br>
+                    <label for="addOns">Add Ons</label><br>
+                    <input type="checkbox" name="addOns" id="cardStacking">Card Stacking (WIP)<br>
+                    <input type="checkbox" name="addOns" id="7/0s">7/0s (WIP)<br>
+                    <input type="checkbox" name="addOns" id="Jump-in">Jump-in (WIP)<br>
+                    <br>
+                    <label for="pp">Server Type</label><br>
+                    <select name="pp" id="pp" onclick="CheckPP()">
+                        <option value="public" id="public" selected="selected">Public</option>
+                        <option value="private" id="private">Private</option>
+                    </select><br>
+                    <br>
+                    <label for="password" id="passwordLabel">Password</label>
+                    <input type="text" name="password" id="password"><br>
+
+                    <div id="submitBox">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+        <script src="js/script.js"></script>
+    </body>
 </html>
