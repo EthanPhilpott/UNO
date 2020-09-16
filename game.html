@@ -8,16 +8,23 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><header>Unoffical<img src="Images/UNO_Logo.png" alt="Uno Logo">Online</header></li>
-        </ul>
+        
+        <header id="logoHeader">Unoffical<img src="Images/UNO_Logo.png" alt="UNO Logo">Online</header>
+        
     </nav>
+
     <div id="split">
         <div>
             <div id="sticky">
                 <div id="currentCard"></div>
                 <button id="draw" onclick=AddCard()>Draw Card</button>
-            </div>  
+                <ul>
+                    <button id="wildBlue" onmousedown="PickColor()" onmouseup="UnpickColor()"></button>
+                    <button id="wildRed" onmousedown="PickColor()" onmouseup="UnpickColor()"></button>
+                    <button id="wildGreen" onmousedown="PickColor()" onmouseup="UnpickColor()"></button>
+                    <button id="wildYellow" onmousedown="PickColor()" onmouseup="UnpickColor()"></button>
+                </ul>  
+            </div>
         </div>
         
         <div id="cardBank">

@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    list-style: none;
     font-family: 'Roboto', sans-serif;
     --UNO-Red: #ED1C24; 
     --UNO-White: #FFF;
@@ -38,7 +39,7 @@ header img {
 #split {
     display: flex;
     flex: auto;
-    height: 90.5vh;
+    height: calc(100vh);
 }
 
 #joinBox {
@@ -59,6 +60,33 @@ header img {
     -webkit-text-stroke: .01vw var(--UNO-White);
     text-shadow: -.15vw .15vw .1vw var(--UNO-Black);
     border-bottom: 0.25vw solid var(--UNO-Black);
+}
+
+#joinBox ul {
+    display: flex;
+    background-color: var(--UNO-Yellow);
+    
+}
+
+#joinBox ul li {
+    padding: 0.25vw;
+    border-right: 0.25vw solid var(--UNO-Black);
+    border-bottom: 0.25vw solid var(--UNO-Black);
+    color: var(--UNO-Black);
+    -webkit-text-stroke: .01vw var(--UNO-White);
+}
+
+#gameName {
+    width: 50%;
+}
+
+#ownerOfGame {
+    width: 25%;
+}
+
+#publicOrPrivate {
+    width: 25%;
+    border-right: 0 solid var(--UNO-White);
 }
 
 #createBox {

@@ -2,15 +2,19 @@
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    list-style: none;
     --UNO-Red: #ED1C24; 
     --UNO-White: #FFF;
+    --UNO-Gray: #c4c4c4;
     --UNO-Black: #000;
     --UNO-Yellow: #F8DA27;
+    --UNO-Blue: #2A7FFF;
+    --UNO-Green: #2CA05A;
 }
 
-#split {
-    display: flex;
-    width: auto;
+html, body {
+    height: 100%;
+    background-color: var(--UNO-Red);
 }
 
 header {
@@ -34,30 +38,70 @@ header img {
     width: 5vw;
 }
 
+#split {
+    display: flex;
+    width: auto;
+}
+
 #sticky {
+    height: calc(100vh - 5vw);
     position: sticky;
     top: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    border-right: .5vw solid var(--UNO-Black);
+    background-color: var(--UNO-White);
 }
 
 #currentCard img {
     width: 25vw;
 }
 
-#sticky button {
+#draw {
     width: 75%;
     font-size: 2.5vw;
     font-weight: bold;
+    background-color: var(--UNO-Gray);
+}
+
+#draw:hover {
+    background-color: #b5b5b5;
+}
+
+#split ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: .45vw;
+}
+
+#split ul button {
+    width: 4vw;
+    height: 4vw;
+    box-shadow: .2vw .2vw var(--UNO-Black);
+}
+
+#wildBlue {
+    background-color: var(--UNO-Blue);
+}
+
+#wildGreen {
+    background-color: var(--UNO-Green);
+}
+
+#wildRed {
+    background-color: var(--UNO-Red);
+}
+
+#wildYellow {
+    background-color: var(--UNO-Yellow);
 }
 
 #cardBank {
     background-color: var(--UNO-Red);
     display: flex;
     flex-grow: 1;
-    border-left: .5vw solid var(--UNO-Black);
 }
 
 #cardBank img {
@@ -68,7 +112,13 @@ header img {
 }
 
 #cardBank button {
+    margin: 0;
     background-color: var(--UNO-Red);
     border: none;
+}
+
+#hand {
+    
+    height: auto;
 }
 

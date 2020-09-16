@@ -1,3 +1,7 @@
+// ----- //
+// Cards //
+// ----- //
+
 let cards = [
     ['Red', 0],['Red', 1],['Red', 2],['Red', 3],
     ['Red', 4],['Red', 5],['Red', 6],['Red', 7],
@@ -38,6 +42,10 @@ let cards = [
     ['zWild'],['zWild'],
     ['zWildDraw4'],['zWildDraw4']
 ]
+
+// --------- //
+// Functions //
+// --------- //
 
 function CanPlace () {
     card = this.value.split(',');
@@ -105,18 +113,23 @@ function SortCards () {
     }
 }
 
-
 function AddCard () {
     document.getElementById("hand").appendChild(CreateCardButton(CreateCard(cards[Math.floor(Math.random() * 103)])))
     SortCards()
+    document.getElementById("cardBank").style.height = document.body.scrollHeight
 }
 
+// Sets the starting current card
 let currCard = cards[Math.floor(Math.random() * 103)];
 
 let cardCurr = CreateCard(currCard);
 cardCurr.id = 'C';
 document.getElementById("currentCard").appendChild(cardCurr);
 
+//Updates screen length
+document.getElementById("cardBank").style.height = "auto"
+
+let staringScrollHeight = document.body.scrollHeight
 
 
 
